@@ -1,0 +1,85 @@
+\documentclass[aps,prx,onecolumn,10pt]{revtex4-2}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,bm,graphicx,booktabs,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\newcommand{\id}{\mathbb I}
+\newcommand{\Ps}{P^{(s)}}
+\newcommand{\Mcal}{\mathcal M}
+\newcommand{\Ical}{\mathcal I}
+\newcommand{\Hpb}{H_{\mathrm{pb}}}
+\begin{document}
+\title{Supplementary Material for \emph{Measurement-Aware Exchange-Only Compilation for Coherent Spin-Qubit Parity Readout}}
+\author{Research manuscript---author list to be confirmed}
+\affiliation{Supplementary numerical methods and validation record}
+\date{November 1, 2026}
+\maketitle
+
+\section{Exact instrument equivalence at an EO readout boundary}
+Let $\mathcal H_A$ and $\mathcal H_D$ denote the ancilla and data physical Hilbert spaces. The ancilla is prepared as $|a_0\rangle$, and its projective readout has projectors $\{M_m\}$. For any physical joint propagator $W$, consider the two pulse sequences $U=L_{\rm out}WL_{\rm in}$ and $\widetilde U=W$, with $L_{\rm in/out}$ acting on $A$ only. If
+\begin{equation}
+ L_{\rm in}|a_0\rangle=e^{i\alpha}|a_0\rangle,\qquad M_m L_{\rm out}=e^{i\beta_m}M_m,
+\end{equation}
+then for all data input vectors $|\psi_D\rangle$
+\begin{align}
+(M_m\otimes\id_D)U(|a_0\rangle\otimes|\psi_D\rangle)
+ &=e^{i(\alpha+\beta_m)}(M_m\otimes\id_D)\widetilde U(|a_0\rangle\otimes|\psi_D\rangle).
+\end{align}
+Tracing out $A$ gives the same conditional data density matrix. By linearity the conclusion extends to all data density operators, including entanglement with a spectator reference. The equivalence concerns only the promised preparation and the recorded projective measurement: it is not an operator identity $U=\widetilde U$, nor does it hold if a subsequent coherent ancilla operation precedes recording the outcome. If the ancilla gauge is mixed with arbitrary weights in $g_A$, the first condition must hold with the same phase for all included gauge values; the singlet-pair exchange used here satisfies this condition.
+
+For the physical EO pair $(4,5)$, $\Ps_{45}$ is the rank-one singlet projector within the two-spin Hilbert space, extended by identity on spin 6. The two physical readout outcomes are $M_0=\Ps_{45}$ and $M_1=\id-\Ps_{45}$. For $X_{45}(a)=\exp(i\pi a\Ps_{45})$,
+\begin{equation}
+ X_{45}(a)=e^{i\pi a}\Ps_{45}+(\id-\Ps_{45}),\quad M_mX_{45}(a)=e^{i\pi a\delta_{m0}}M_m.
+\end{equation}
+The encoded logical $|0,g_A\rangle$ carries a singlet on that pair, so it is an eigenvector of the same physical $X_{45}(a)$, independently of $g_A$. These identities are valid for \emph{any} exchange area, including a multiplicative miscalibration of the deleted pulse, and even if leakage occurs inside $W$. The final $M_1$ outcome, however, cannot by itself distinguish a logical triplet from quartet leakage. Hence the exact boundary argument is not a leakage-detection scheme.
+
+\section{Why a coarse-grained two-check protocol is not a four-body check}
+Let $S_1=Z_1Z_2$ and $S_2=Z_3Z_4$, and $P^{(i)}_\pm=(\id\pm S_i)/2$. An ideal joint measurement of the two commuting observables, followed by classically reporting only their product $s$, has the instrument
+\begin{equation}
+ \Ical_s^{\rm fine}(\rho)=\sum_{t=\pm} P^{(1)}_t P^{(2)}_{st}\,\rho\,P^{(2)}_{st}P^{(1)}_t.
+\end{equation}
+The ideal direct four-body parity measurement instead applies
+\begin{equation}
+ \Ical_s^{\rm coarse}(\rho)=P^{S_1S_2}_s\rho P^{S_1S_2}_s,\quad P^{S_1S_2}_s=\sum_{t=\pm}P^{(1)}_tP^{(2)}_{st}.
+\end{equation}
+The cross terms between $t=+$ and $t=-$ survive in the latter but are absent in the former. For $\rho=|++++\rangle\langle++++|$, the normalized postselected $s=+$ state of the coarse measurement is pure, whereas the fine-measured, classically merged state is a mixture of two orthogonal equal-weight components and has purity $1/2$. The distinction is not a detector-bit problem; it is a quantum backaction problem that must enter any stabilizer-instrument synthesis objective.
+
+\section{Exchange schedule, representation, and numerical precision}
+The provided data files use chronological step labels. A pulse record $(\ell,i,j,a)$ instructs the simulator to activate the physical singlet projector on bond $(i,j)$ during layer $\ell$ with exchange area $\pi a$. Records sharing a layer are aggregated before exponentiation; overlapping bonds must never be approximated by applying separate exponentials. All nonzero optimized active controls satisfy $0.15\leq a<2$.
+
+The validated, selected $ZZ$ instrument comprises 48 records and 27 nominal unit-duration ASAP layers. Its exact schedule is in \texttt{data/ZZ\_48C\_P1R0.csv}. Two 22-control FW-derived entanglers are interleaved with a two-control ancilla initialization and a two-control measurement-basis transformation. The two 22-control operators are numerically exact logical CZs on the six-spin encoded gauge domain, embedded in a nine-spin physical chain. The code does \emph{not} assume an ideal ancilla spin-$1/2$ Hadamard on an individual physical spin. The 60-control $XX$ instrument is implemented using physical exchange-only encoded basis transformations on data triples.
+
+To validate the ideal target, propagate the physical unitary on every encoded input $|d_L,d_R\rangle\otimes|g_L,g_A,g_R\rangle$ (the arbitrary-gauge test); after each readout projection inspect (i) the conditional encoded data Kraus column, (ii) the orthogonal leakage component, and (iii) the same parity-subspace relative phases for coherent superpositions. The 9-spin encoded Kraus residuals of the two outcome maps are $1.58\times10^{-15}$ and $1.80\times10^{-15}$ for $ZZ$, and $3.13\times10^{-15}$ and $2.13\times10^{-15}$ for $XX$, after matching only the physically irrelevant outcome phase.
+
+The 15-spin star reference has an ancilla triple $(1,2,3)$ and data triples $(4,5,6)$, $(7,8,9)$, $(10,11,12)$, and $(13,14,15)$. The required exchange bonds are the ancilla internal $(1,2),(2,3)$, the four hub couplers $(3,4),(3,7),(3,10),(3,13)$, and the first internal bond of each data triple. Four 22-control FW-derived CZs plus four ancilla boundary controls make $ZZZZ$ 92 controls, while four logical EO Hadamards before and after add 24 controls for $XXXX$. Their complete physical graph is not a strict line. Every 15-spin test uses state-vector propagation in dimension $32768$; the reported 512 checked columns correspond to $16$ logical data inputs times $32$ ancilla/data-gauge combinations, and include additional superposition tests to check nondemolition coherence.
+
+\section{Observable definitions and error covariance}
+For a correctly initialized encoded input $|\psi,g\rangle$ with ideal parity $m_*(\psi)$, the wrong-syndrome probability is
+\begin{equation}
+ p_{\rm wrong}=\frac{1}{N}\sum_{\psi,g}\sum_{m\neq m_*(\psi)} \left\|(M_m\otimes\id_D) U_{\rm noisy}(|0,g_A\rangle\otimes|\psi,g_D\rangle)\right\|^2,
+\end{equation}
+with the averaging set restricted to the tested computational-basis eigeninputs. Leakage probability is computed with the orthogonal complement of the three-EO code isometry on the final physical state, and the instrument-loss objective is evaluated separately using the intended conditional quantum operation. For each observable $p$ vanishing at the ideal point, the diagonal per-bond coefficient is
+\begin{equation}
+ H_{p,b}=\frac12\left.\frac{\partial^2p}{\partial\delta_b^2}\right|_{\bm\delta=0},\qquad H_p=\sum_bH_{p,b}.
+\end{equation}
+In the frozen numerical implementation, the symmetric finite differences use a static bond perturbation of $\pm0.0008$ (all uses of that same bond share the shift). Monte Carlo applies a single normally distributed $\delta_b$ to every occurrence of that physical bond in a shot, and an independent $\eta_{\ell b}$ to every active exchange control. The reported gain-noise curvature is an application-specific observable curvature, not the quantity $\Hpb$ used in the six-spin unitary optimization.
+
+For non-diagonal covariance $C_{bb'}=\mathbb E[\delta_b\delta_{b'}]$ the quadratic error should generally be computed as a contraction $\sum_{bb'}C_{bb'}H_{p,bb'}$ rather than by inserting only independent diagonal variances. If physical pulse error is correlated across different bonds or drifts over the course of a syndrome cycle, even this contraction can be insufficient; modeling coherent temporal correlations requires reevaluating the full physical propagation. The model in the main text lacks calibration of waveform rise time, control-voltage cross talk, pulse area as a function of dwell time, charge-noise spectrum, readout assignment, ancilla reset, and data-idle dephasing.
+
+\section{Numerical evidence and verification boundaries}
+\begin{table}[h]
+\caption{Frozen evidence records. Endpoint residuals refer to the ideal simulated unitary/instrument after physically irrelevant phases are matched, not to noisy laboratory outcomes.}
+\begin{ruledtabular}\begin{tabular}{lll}
+Object & Verified outcome & Physical Hilbert space\\\hline
+30-control CZ & static harm $32.011918$ & $2^6$ / embedded $2^9$\\
+48-control $ZZ$ & $1.58,1.80\times10^{-15}$ Kraus & $2^9$\\
+60-control $XX$ & $3.13,2.13\times10^{-15}$ Kraus & $2^9$\\
+92-control $ZZZZ$ & $2.45\times10^{-15}$ maximum & $2^{15}$ state vector\\
+116-control $XXXX$ & $3.31\times10^{-15}$ maximum & $2^{15}$ state vector\\
+\end{tabular}\end{ruledtabular}
+\end{table}
+In 750 shared-disorder draws, the wrong-syndrome means were $0.01103592$ (50-control) and $0.01004484$ (48-control); the mean paired difference was $-0.0009911$, with estimated normal 95\% confidence half-width $0.0002694$. The sampling uncertainty, noise model and endpoint numerical precision must be quoted separately. In an additional 48- versus 66-control paired test, a small difference in wrong-syndrome rate was not statistically resolved, although the longer construction improves some other metrics. The 66-control instrument therefore does not establish a clear winner absent an explicit cost model for error, control count, depth, and real gate duration.
+
+\section{Scope and conditions for a stronger QEC claim}
+A physics-level gate/instrument study is not a demonstration of fault-tolerant error correction. Before claiming a logical-level improvement, the protocol must be embedded in repeated stabilizer rounds including leakage transport and reduction, measurements and resets with assignment errors, circuit-level correlated faults, decoder response and geometry-specific routing. The 15-spin star topology, in particular, must be physically specified or replaced by a correctly routed strict-linear implementation. A useful engineering target is a direct, nonfactorized parity-instrument synthesis with a calibrated noise covariance and fewer than 48 active exchange controls. Such a construction is \emph{not} reported in this work.
+\end{document}
