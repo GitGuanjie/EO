@@ -24,7 +24,7 @@ jobs:
       - name: Render manuscript
         run: |
           # The original figures are omitted until their binary assets are available in this repository.
-          sed -e '/^!\\[/d' -e 's/linkcolor: MidnightBlue/linkcolor: blue/' -e 's/urlcolor: MidnightBlue/urlcolor: blue/' SOEO_EO_QEC/manuscript/SOEO_EO_QEC_WORKING_PAPER.md > /tmp/soeo_eo_paper.md
+          sed -e '/^!/d' -e 's/linkcolor: MidnightBlue/linkcolor: blue/' -e 's/urlcolor: MidnightBlue/urlcolor: blue/' SOEO_EO_QEC/manuscript/SOEO_EO_QEC_WORKING_PAPER.md > /tmp/soeo_eo_paper.md
           pandoc /tmp/soeo_eo_paper.md -o SOEO_EO_QEC/manuscript/SOEO_EO_QEC_WORKING_PAPER.pdf --pdf-engine=xelatex -V mainfont="DejaVu Sans" -V monofont="DejaVu Sans Mono"
       - name: Commit generated PDF
         run: |
