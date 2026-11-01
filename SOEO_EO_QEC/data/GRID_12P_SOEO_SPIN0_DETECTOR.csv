@@ -1,0 +1,15 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: GRID_12P_SOEO_SPIN0_DETECTOR.csv>
+index,step,phase,site_i,site_j,exchange_area_a,notes
+0,1,route_pre,8,9,1.0,"SWAP(b,D4); singlet b moves to (row2,col2)"
+1,2,detect,4,5,0.5879256673992909,star data index 1
+2,3,detect,5,6,1.3503771670925504,star data index 3
+3,4,detect,5,8,1.1895159205822183,star data index 4
+4,5,detect,5,6,1.35037716709255,star data index 3
+5,6,detect,2,5,1.2300534561626155,star data index 2
+6,7,detect,4,5,1.2300534561626155,star data index 1
+7,8,detect,5,6,0.1895159205822176,star data index 3
+8,9,detect,5,8,0.3503771670925499,star data index 4
+9,10,detect,5,6,0.189515920582218,star data index 3
+10,11,detect,2,5,0.5879256673992909,star data index 2
+11,12,route_post,8,9,1.0,"SWAP(b,D4) back; then measure singlet/triplet on dots 5 and 8"
