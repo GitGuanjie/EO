@@ -1,0 +1,364 @@
+%PDF-1.4
+%EO-QEC-PDF
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.3 841.9] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 4874 >>
+stream
+BT /F2 17 Tf 1 0 0 1 52.0 768.9 Tm (EXCHANGE-ONLY QUANTUM CONTROL AND STABILIZER) Tj ET
+BT /F2 17 Tf 1 0 0 1 52.0 745.9 Tm (EXTRACTION) Tj ET
+BT /F2 11 Tf 1 0 0 1 52.0 700.9 Tm (A verified numerical research synthesis \(R138-R154\)) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 682.9 Tm (Numerical working paper. Author list and publication status not yet confirmed.) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 671.4 Tm (This PDF is a text-focused repository rendition. For figures and typeset equations consult the original) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 660.9 Tm (ChatGPT PDF archive.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 52.0 633.4 Tm (Scope and evidence standard) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 605.4 Tm (This paper is a working synthesis of independently packaged numerical research rounds R138-R154, not a) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 593.4 Tm (claim of newly completed hardware experiments or an accepted publication. It reorganizes the evidence into) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 581.4 Tm (a single scientific narrative, and deliberately retains negative results. The included archives contain) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 569.4 Tm (the original optimized angles, physical exchange schedules, numerical certificates, simulation code, and) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 557.4 Tm (model assumptions. Numerical endpoints reported as "exact" mean residuals at approximately $10^{-11}$ or) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 545.4 Tm (better in the specified floating-point physical representations, not symbolic proofs of the angles.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 525.4 Tm (The guiding question is whether simultaneous exchange offers a physically efficient path from isolated,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 513.4 Tm (noise-shaped EO entanglers to encoded stabilizer measurements with acceptable syndrome error, leakage, and) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 501.4 Tm (duration. Three distinctions are essential: physical vs. encoded correction, gate vs.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 489.4 Tm (measurement-instrument equivalence, and conditional numerical fidelity vs. hardware error rates.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 52.0 453.4 Tm (Exchange-only encoding and physical controls) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 425.4 Tm (Each logical EO qubit is carried by three spin-$1/2$ particles. In the total-spin $S=1/2$ manifold, the) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 413.4 Tm (state of a chosen pair \(singlet or triplet\) represents a logical degree of freedom, while $S_z=\\pm 1/2$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 401.4 Tm (gives a gauge degree of freedom; the $S=3/2$ quartet is leakage. For two triples there are $4\\times4=16$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 389.4 Tm (encoded logical--gauge input states within the full six-spin dimension $2^6=64$.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 369.4 Tm (Writing the physical singlet projector on spins $i,j$ as) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 349.4 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 337.9 Tm (P_{ij}^{\(s\)}=\\tfrac12\(I-\\mathrm{SWAP}_{ij}\),) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 322.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 306.4 Tm (our dimensionless positive exchange convention is) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 286.4 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 274.9 Tm (X_{ij}\(a\)=\\exp\(i\\pi a P_{ij}^{\(s\)}\),\\qquad 0.15\\leq a<2) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 259.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 243.4 Tm (for active controls in the reported searches. Unlike a sequential pulse decomposition, a simultaneous) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 231.4 Tm (layer on overlapping bonds must be evaluated with one matrix exponential:) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 211.4 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 199.9 Tm (U_\\ell=\\exp\\!\\left\(i\\pi\\sum_{b\\in\\mathcal B_\\ell}) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 184.9 Tm (a_{\\ell b}P_b^{\(s\)}\\right\),\\quad U=U_L\\cdots U_1.) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 169.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 153.4 Tm (Nonoverlapping exchanges commute; overlapping exchanges usually do not. Every target must be checked on) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 141.4 Tm (all encoded gauge states, not on a selected logical basis state alone.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 121.4 Tm (If $E$ is the $64\\times16$ code isometry, an exact encoded CZ with fixed gauge has $UE=E\(CZ\\otimes I_g\)$,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 109.4 Tm (with vanishing component in the orthogonal leakage space. For measurement protocols we also admit a) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 97.4 Tm (consistent gauge-only transformation and record-dependent overall phase when the resulting quantum) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 85.4 Tm (instrument, not the full unmeasured unitary, is unchanged.) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 52.0 34.0 Tm (Working research synthesis | GitGuanjie/EO | November 2026) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 528.0 34.0 Tm (1) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.3 841.9] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 5226 >>
+stream
+BT /F2 13.5 Tf 1 0 0 1 52.0 765.9 Tm (Noise model and acceptance metrics) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 737.9 Tm (The main model samples a fractional static gain $\\delta_b$ once per physical bond per shot and reuses that) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 725.9 Tm (value at every occurrence of the bond. A distinct independent fluctuation $\\eta_{\\ell b}$ perturbs each) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 713.9 Tm (active control. The representative assumptions are) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 693.9 Tm ($$) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 682.4 Tm (\\delta_b\\sim\\mathcal N\(0,0.015^2\),\\qquad) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 670.9 Tm (\\eta_{\\ell b}\\sim\\mathcal N\(0,0.0006^2\).) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 659.4 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 642.9 Tm (These are the assumptions used by the accompanying numerical studies, not a site-resolved calibration of a) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 630.9 Tm (particular experimental device. Separate context-dependent coactivation fluctuations were tested with) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 618.9 Tm (assumed standard deviations and various correlation times; those values should not be read as experimental) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 606.9 Tm (measurements.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 586.9 Tm (The input-referred first-order static generator on bond $b$ is) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 566.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 555.4 Tm (K_b=-iU\(0\)^\\dagger\\left.\\frac{\\partial U}{\\partial\\delta_b}\\right|_0.) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 540.4 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 523.9 Tm (We report its gauge-subtracted harmful coefficient, including leakage,) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 503.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 492.4 Tm (H_b=\\frac1{16}\\min_{h=h^\\dagger}) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 477.4 Tm (\\left\\|K_b E-E\(I_{\\rm logical}\\otimes h_{\\rm gauge}\)\\right\\|_F^2,) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 465.9 Tm (\\qquad H_{\\rm pb}=\\sum_bH_b.) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 454.4 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 437.9 Tm ($H_{\\rm IID}$ similarly sums the independent-control contributions. For sufficiently weak fluctuations,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 425.9 Tm (infidelity begins as a quadratic form in the variances. Gate-level $H_{\\rm pb}$, conditional instrument) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 413.9 Tm (loss, wrong-syndrome probability, and leakage probability are different observables with different) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 401.9 Tm (normalizations and must not be interchanged. "Controls" counts active physical exchange couplings; "ASAP) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 389.9 Tm (depth" assumes unit-duration compatible layers and is not a calibrated wall-clock time.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 52.0 353.9 Tm (Six-spin simultaneous-exchange CZ: the central constructive result) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 325.9 Tm (The short exact CZ reference is the 22-control Fong--Wandzura-derived sequence in the archived linear) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 313.9 Tm (six-spin encoding [1]. Later rounds explored exact simultaneous replacement, error-generator cones, local) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 301.9 Tm (spin-sector recurrences, positive-exchange composite loops, and six-spin noncommuting frames.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 281.9 Tm (For the directly comparable 28-control/19-layer R139 baseline, the optimized R143 sequence uses 30 active) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 269.9 Tm (controls in the same 19 nominal ASAP layers and gives) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 249.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 238.4 Tm (H_{\\rm pb}:37.668119847\\longrightarrow32.011918153) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 223.4 Tm (\\qquad\(15.02\\%\\ \\mathrm{reduction}\),) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 211.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 195.4 Tm (while $H_{\\rm IID}$ decreases from $45.7993$ to $43.5393$. The physical gate is validated with full) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 183.4 Tm ($64$-dimensional exchange propagation and, after translation, with $512$-dimensional propagation of a) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 171.4 Tm (nine-spin assembly. The encoded residual is on the order of $10^{-13}$. A second 30-control trade-off has) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 159.4 Tm ($H_{\\rm pb}=32.9022$, $H_{34}=8.4960$, and $H_{\\rm IID}=41.9486$. Neither eliminates the bridge error at) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 147.4 Tm (first order.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 127.4 Tm (Figure available in the companion PDF and reproducibility archive.) Tj ET
+BT /F3 7.2 Tf 1 0 0 1 52.0 107.4 Tm (Certified CZ reference | Active controls | ASAP depth | $H_{\\rm pb}$ | $H_{34}$ | $H_{\\rm IID}$) Tj ET
+BT /F3 7.2 Tf 1 0 0 1 52.0 97.4 Tm (R139 total-noise baseline | 28 | 19 | 37.6681 | 8.8616 | 45.7993) Tj ET
+BT /F3 7.2 Tf 1 0 0 1 52.0 87.4 Tm (R143 optimized static | 30 | 19 | 32.0119 | 8.9451 | 43.5393) Tj ET
+BT /F3 7.2 Tf 1 0 0 1 52.0 77.4 Tm (R143 bridge-balanced | 30 | 19 | 32.9022 | 8.4960 | 41.9486) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 52.0 34.0 Tm (Working research synthesis | GitGuanjie/EO | November 2026) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 528.0 34.0 Tm (2) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.3 841.9] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 5147 >>
+stream
+BT /F3 7.2 Tf 1 0 0 1 52.0 781.9 Tm (R144 selective bridge | 32 | 20 | 49.7808 | 7.8607 | 42.2649) Tj ET
+BT /F3 7.2 Tf 1 0 0 1 52.0 771.9 Tm (R149 six-spin coactivation | 35 | 19 | 37.9950 | 8.9451 | 51.3420) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 756.9 Tm (The improvement is principally a change in $J_{12}$ logical-error sensitivity, not a complete bridge-gain) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 744.9 Tm (correction. Specifically, in the R143 comparison, $J_{12}$ harmful contribution falls from approximately) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 732.9 Tm ($12.2520$ to $7.4315$, while $J_{34}$ changes from $8.8616$ to $8.9451$. Some additional endpoint Jacobian) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 720.9 Tm (directions have very small singular values \($\\sim10^{-6}$\), limiting the physical significance of a simple) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 708.9 Tm (rank-count argument.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 688.9 Tm (Figure available in the companion PDF and reproducibility archive.) Tj ET
+BT /F2 9.5 Tf 1 0 0 1 52.0 662.9 Tm (Why straightforward compensation failed) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 642.9 Tm (Several carefully bounded negative screens were useful. Adding exact simultaneous identity loops,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 630.9 Tm (including four-spin revival blocks, generally worsened $H_{\\rm pb}$ because each additional positive) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 618.9 Tm (exchange accumulates static and IID error. Some optimizations reduce $H_{34}$ at the cost of substantially) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 606.9 Tm (increasing other bond sensitivities. Introducing $J_{56}$ as an extra control in the old five-spin frame) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 594.9 Tm (creates new endpoint directions, but their positive-area tangent cone cannot be cancelled by arbitrarily) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 582.9 Tm (small added pulses near that particular seed. This is not a no-go theorem against all six-spin CZ designs.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 562.9 Tm (The six-spin nested commutator) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 542.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 531.4 Tm (D=[P_{56}^{\(s\)},[P_{45}^{\(s\)},P_{34}^{\(s\)}]]) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 516.4 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 499.9 Tm (is nonzero even though $[P_{56}^{\(s\)},P_{34}^{\(s\)}]=0$, and a two-bond direction) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 487.9 Tm ($Q=i[P_{45}^{\(s\)},P_{34}^{\(s\)}]$ gives greater reduction of the projected error in idealized) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 475.9 Tm (operator-budget screens. However, the budget coefficients do not correspond to physically executable pulse) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 463.9 Tm (areas. Later rounds found positive-exchange simultaneous loops with either sign of a $Q$ component, but) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 451.9 Tm (none gave a lower total-noise exact CZ after insertion. Positive exchange yields semidefinite first-order) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 439.9 Tm (physical generators, so a pure, unaccompanied traceless $Q$ term is not physically available as a) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 427.9 Tm (bond-gain derivative.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 52.0 391.9 Tm (A three-spin dual-static-gain corrected exchange: useful but not) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 52.0 373.9 Tm (transferable) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 345.9 Tm (On a crossing triple $2,3,4$, a six-layer, twelve-control positive simultaneous sequence was synthesized) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 333.9 Tm (that implements a physical $J_{34}\(1\)$ SWAP. With two independent bond-static gains,) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 313.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 302.4 Tm (U_\\ell=\\exp\\{i\\pi[a_\\ell P_{23}^{\(s\)}+b_\\ell P_{34}^{\(s\)}]\\},) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 287.4 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 270.9 Tm (and the first-order generators reduce, numerically, to scalars on the triple's $S=1/2$ sector:) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 250.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 239.4 Tm (K_{23}=\\kappa_{23}\\Pi_{234}^{S=1/2},\\qquad) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 224.4 Tm (K_{34}=\\kappa_{34}\\Pi_{234}^{S=1/2}.) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 209.4 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 192.9 Tm (Consequently, the isolated three-spin logical operation has no first-order harmful static-gain rotation. A) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 180.9 Tm (deterministic noise-amplitude scan gives logical infidelity power-law slopes close to four on both) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 168.9 Tm (independent error directions, versus approximately two for a direct SWAP. The 15,000-shot isolated-triple) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 156.9 Tm (simulations yield $3.72\\times10^{-4}$ versus $9.88\\times10^{-6}$ for direct versus composite SWAP under) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 144.9 Tm (the static-plus-IID model.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 124.9 Tm (Figure available in the companion PDF and reproducibility archive.) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 52.0 34.0 Tm (Working research synthesis | GitGuanjie/EO | November 2026) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 528.0 34.0 Tm (3) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.3 841.9] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 5017 >>
+stream
+BT /F1 8.7 Tf 1 0 0 1 52.0 781.9 Tm (The protection does not carry over to two EO qubits. The projector $\\Pi_{234}^{S=1/2}$ is not gauge-only) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 769.9 Tm (for the $123|456$ code. Replacing one bridge pulse in an otherwise exact 22-control CZ creates a) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 757.9 Tm (31-control exact gate with $H_{\\rm pb}=80.276$ and $H_{34}=11.584$, both worse than the original. If) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 745.9 Tm (simultaneous context noise fluctuates independently every layer rather than being shot-static, the) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 733.9 Tm (isolated triple's fourth-order benefit also degrades markedly. These observations support noise) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 721.9 Tm (correlation-time-aware compilation rather than a simple claim of universal exchange-gain immunity.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 52.0 685.9 Tm (Measurement-instrument-first design) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 657.9 Tm (For a Pauli check $S$ and recorded outcome $m\\in\\{0,1\\}$, the target ideal nondemolition Kraus operator on) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 645.9 Tm (data is) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 625.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 614.4 Tm (M_m=P_m^{S}=\\frac{I+\(-1\)^mS}{2}.) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 599.4 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 582.9 Tm (Syndrome probabilities alone are insufficient. A valid measurement must preserve arbitrary superpositions) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 570.9 Tm (within each eigenspace of $S$ and must not introduce unwanted logical backaction or leakage. For example,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 558.9 Tm (separately measuring $Z_1Z_2$ and $Z_3Z_4$ then multiplying the recorded bits coarse-grains two stronger) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 546.9 Tm (measurements; it is not the same instrument as measuring $Z_1Z_2Z_3Z_4$. On $|++++\\rangle$, conditioning) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 534.9 Tm (on positive four-body parity gives purity $1$ for the correct projector but only $1/2$ for the) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 522.9 Tm (fine-grained protocol.) Tj ET
+BT /F2 11 Tf 1 0 0 1 52.0 492.9 Tm (Nine-spin coherent ZZ and XX checks) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 469.9 Tm (Take three consecutive EO triples, data-left $\(1,2,3\)$, ancilla $\(4,5,6\)$, and data-right $\(7,8,9\)$. The) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 457.9 Tm (exact baseline is) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 437.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 426.4 Tm (H_A\\;CZ_{L,A}\\;CZ_{A,R}\\;H_A\\;\\mathrm{ST\\ readout}_A,) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 411.4 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 394.9 Tm (where each logical $H_A$ is synthesized with positive exchange only, not with an assumed physical) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 382.9 Tm (single-spin magnetic rotation. The 50-control/29-layer ZZ construction and its 62-control XX counterpart) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 370.9 Tm (are validated by complete physical $512$-dimensional propagation and outcome-conditioned Kraus comparison) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 358.9 Tm (across all $32$ input logical--gauge states.) Tj ET
+BT /F2 11 Tf 1 0 0 1 52.0 328.9 Tm (Exact measurement-specific elimination of two controls) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 305.9 Tm (An important reduction is exact for the recorded instrument but not necessarily for the full unmeasured) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 293.9 Tm (unitary. At preparation the ancilla is known to be $|0,g\\rangle$, with its first pair $\(4,5\)$ singlet.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 281.9 Tm (Thus) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 261.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 250.4 Tm (X_{45}\(a\)|0,g\\rangle=e^{i\\pi a}|0,g\\rangle.) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 235.4 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 218.9 Tm (At readout the projectors are $M_0=P_{45}^{\(s\)}$ and $M_1=I-P_{45}^{\(s\)}$. As $X_{45}\(a\)$ commutes with) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 206.9 Tm (both,) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 186.9 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 175.4 Tm (M_0X_{45}\(a\)=e^{i\\pi a}M_0,\\qquad) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 160.4 Tm (M_1X_{45}\(a\)=M_1.) Tj ET
+BT /F3 7.6 Tf 1 0 0 1 59.0 145.4 Tm ($$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 128.9 Tm (The initial and final $J_{45}$ controls can therefore be omitted without changing the normalized) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 116.9 Tm (outcome-conditioned physical data operation \(only irrelevant outcome phases remain\). This takes the ZZ) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 104.9 Tm (instrument from 50 controls / 29 ASAP layers to 48 controls / 27 layers. This exact pruning alone does not) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 92.9 Tm (improve the error statistics, because the discarded controls were physically irrelevant even when) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 80.9 Tm (miscalibrated.) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 52.0 34.0 Tm (Working research synthesis | GitGuanjie/EO | November 2026) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 528.0 34.0 Tm (4) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.3 841.9] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 15 0 R >>
+endobj
+15 0 obj
+<< /Length 5691 >>
+stream
+BT /F1 8.7 Tf 1 0 0 1 52.0 781.9 Tm (The additional gain comes from choosing a different legal two-exchange ancilla preparation branch. In) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 769.9 Tm (chronological order, the optimized preparation uses $J_{56}\(0.60817344797\)$ followed by) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 757.9 Tm ($J_{45}\(1.69591327602\)$, while the readout basis changer retains the archived branch. These operations) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 745.9 Tm (prepare the same required ancilla input but need not implement the same $H$ on arbitrary ancillary states.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 733.9 Tm (Full nine-spin two-outcome Kraus residuals are $\\sim10^{-15}$.) Tj ET
+BT /F3 7.2 Tf 1 0 0 1 52.0 713.9 Tm (Nine-spin ZZ instrument | Controls | ASAP depth | Static instrument curvature | Static wrong-syndrome curvature) Tj ET
+BT /F3 7.2 Tf 1 0 0 1 52.0 703.9 Tm (R153 original | 50 | 29 | 90.1754 | 50.1050) Tj ET
+BT /F3 7.2 Tf 1 0 0 1 52.0 693.9 Tm (R154 boundary-pruned only | 48 | 27 | 90.1754 | 50.1050) Tj ET
+BT /F3 7.2 Tf 1 0 0 1 52.0 683.9 Tm (R154 optimized preparation | 48 | 27 | 86.0781 | 46.0078) Tj ET
+BT /F3 7.2 Tf 1 0 0 1 52.0 673.9 Tm (R153 two R143 CZ gates | 66 | 39 | 76.5499 | 46.1944) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 658.9 Tm (The optimized 48-control choice reduces wrong-syndrome curvature by 8.18% against the original 50-control) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 646.9 Tm (instrument, while keeping the average leakage curvature approximately unchanged. A principal sensitivity) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 634.9 Tm (is the ancilla-adjacent $J_{56}$ bond, whose wrong-syndrome coefficient changes from approximately) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 622.9 Tm ($20.0460$ to $14.2895$. Thus an instrument-level objective can prioritize a different bond than an) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 610.9 Tm (isolated CZ compiler.) Tj ET
+BT /F2 9.5 Tf 1 0 0 1 52.0 584.9 Tm (Finite-noise assessment) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 564.9 Tm (With $750$ paired simulations at shot-static gain $1.5\\%$ and independent jitter $0.06\\%$, the original) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 552.9 Tm (50-control instrument has wrong-syndrome probability $0.01103592$, and the optimized 48-control instrument) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 540.9 Tm (has $0.01004484$. The paired difference is $-0.00099108\\pm0.00026945$ \(quoted $95\\%$ normal) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 528.9 Tm (confidence-interval halfwidth\). Instrument loss changes from $0.01974105$ to $0.01873975$. Leakage) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 516.9 Tm (differences are statistically inconclusive. These figures do not include calibrated readout errors,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 504.9 Tm (waiting dephasing or reset.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 484.9 Tm (Figure available in the companion PDF and reproducibility archive.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 464.9 Tm (The 66-control check has lower full-instrument loss and leakage under another matched comparison but) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 452.9 Tm (requires 18 extra controls and 12 extra ASAP layers relative to 48-control. Its wrong-syndrome advantage) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 440.9 Tm (is not statistically established in that comparison. In particular, one should not merge sample means from) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 428.9 Tm (separate Monte Carlo batches into a single paired statistical test.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 52.0 392.9 Tm (Fully physical weight-four reference on an explicit star graph) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 364.9 Tm (A five-EO reference uses an ancilla triple $\(1,2,3\)$ and data triples $\(4,5,6\)$, $\(7,8,9\)$, $\(10,11,12\)$,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 352.9 Tm ($\(13,14,15\)$. It assumes physical controllable exchange edges $\(3,4\)$, $\(3,7\)$, $\(3,10\)$, and $\(3,13\)$) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 340.9 Tm (plus specified internal bonds. This is not a strict one-dimensional nearest-neighbor device and must not) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 328.9 Tm (be described as one.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 308.9 Tm (Four mapped 22-control FW-derived CZs plus a two-control ancilla preparation and a two-control readout) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 296.9 Tm (changer yield a 92-control / 56-ASAP-layer coherent ZZZZ measurement baseline. Applying physical) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 284.9 Tm (three-exchange logical Hadamards to all four data triples before and after the ZZZZ sequence yields a) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 272.9 Tm (116-control / 56-layer XXXX baseline in the stated unit-time concurrency model.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 252.9 Tm (All 16 data logical patterns multiplied by all 32 combined gauge patterns, i.e. 512 encoded input basis) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 240.9 Tm (states, were explicitly propagated in the full $2^{15}=32768$ physical state space. Maximum output vector) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 228.9 Tm (residuals are approximately $2.45\\times10^{-15}$ for ZZZZ and $3.31\\times10^{-15}$ for XXXX; selected) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 216.9 Tm (coherent-superposition checks verify preservation within each parity sector. These are CZ-factorized) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 204.9 Tm (constructions. They do not demonstrate a shorter direct four-body measurement, repeated rounds of) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 192.9 Tm (correction, or a practical star-chip implementation.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 52.0 156.9 Tm (Interpretation, limitations and open research questions) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 52.0 34.0 Tm (Working research synthesis | GitGuanjie/EO | November 2026) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 528.0 34.0 Tm (5) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.3 841.9] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 17 0 R >>
+endobj
+17 0 obj
+<< /Length 5559 >>
+stream
+BT /F1 8.7 Tf 1 0 0 1 52.0 781.9 Tm (The trajectory supports three defensible conclusions. First, overlapping simultaneous exchanges provide) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 769.9 Tm (real noncommuting control and allow nontrivial noise-generator engineering, but a short six-spin, all-bond) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 757.9 Tm (first-order-corrected exact CZ remains an open problem in these archives. Second, a strong locally) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 745.9 Tm (corrected crossing triple is not necessarily a corrected multi-EO gate: the code and leakage projectors) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 733.9 Tm (must be re-evaluated globally. Third, the most tangible system-level saving comes from relaxing) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 721.9 Tm (unnecessary intermediate gate constraints when ancilla initialization and measurement are fixed.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 701.9 Tm (The major limitations are: \(i\) noise strengths and context covariance are model inputs rather than) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 689.9 Tm (measured per-device maps; \(ii\) ASAP depth is not a waveform-calibrated duration and 48 controls do not) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 677.9 Tm (necessarily imply a smaller total exchange-area time; \(iii\) no independent noise calibration of the) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 665.9 Tm (claimed star couplers is provided; \(iv\) singlet-triplet readout does not separate logical triplet from) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 653.9 Tm ($S=3/2$ leakage; \(v\) no repeated syndrome, ancilla reset, hook-error circuit, leakage-reduction unit,) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 641.9 Tm (decoder, logical error suppression or threshold was evaluated; and \(vi\) this synthesis is not a full) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 629.9 Tm (novelty or experimental feasibility review.) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 609.9 Tm (The next useful publication-quality advance would be a directly synthesized quantum instrument with fewer) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 597.9 Tm (than 48 controls or a materially lower wrong-syndrome/error-plus-duration objective, validated in full) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 585.9 Tm (nine-spin dynamics. For weight-four checks, the analogous objective must be formulated on an explicitly) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 573.9 Tm (feasible geometry, include readout/reset/leakage and repeated-cycle propagation, and compare full) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 561.9 Tm (conditional Kraus maps rather than parity bits alone.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 52.0 525.9 Tm (Reproducibility and research provenance) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 497.9 Tm (The accompanying repository package retains selected full-precision sequences and four source-archive ZIPs) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 485.9 Tm (\(R143, R146, R153, R154\); an additional all-round archival bundle contains R138-R154. Each source ZIP is) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 473.9 Tm (treated as a frozen research artifact with its own code, evidence and internal SHA-256 listing. Re-run the) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 461.9 Tm (corresponding archive verifiers before changing geometry or gauge convention; note that their denominators) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 449.9 Tm (and definitions differ between gate, isolated triple, and instrument metrics. Exact filenames, command) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 437.9 Tm (entry points, and hashes are listed in REPRODUCIBILITY.md and SOURCE_MANIFEST.csv.) Tj ET
+BT /F2 13.5 Tf 1 0 0 1 52.0 401.9 Tm (References) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 373.9 Tm ([1] B. H. Fong and S. M. Wandzura, "Universal quantum computation and leakage reduction in the 3-qubit) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 361.9 Tm (decoherence free subsystem," Quantum Information and Computation 11, 1003-1018 \(2011\).) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 349.9 Tm (https://doi.org/10.26421/QIC11.11-12-9) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 329.9 Tm ([2] G. T. Hickman, X. Wang, J. P. Kestner, and S. Das Sarma, "Dynamically corrected gates for an) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 317.9 Tm (exchange-only qubit," Physical Review B 88, 161303\(R\) \(2013\). https://doi.org/10.1103/PhysRevB.88.161303) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 297.9 Tm ([3] I. Heinz et al., "Fast Quantum Gates for Exchange-Only Qubits Using Simultaneous Exchange Pulses," PRX) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 285.9 Tm (Quantum 6, 030353 \(2025\). https://doi.org/10.1103/njq3-fcdd) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 265.9 Tm ([4] M. T. Madzik et al., "Operating two exchange-only qubits in parallel," Nature 647, 870-875 \(2025\).) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 253.9 Tm (https://doi.org/10.1038/s41586-025-09767-5) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 233.9 Tm ([5] Members of the HRL Quantum Team and Collaborators, "A digitally controlled silicon quantum processing) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 221.9 Tm (unit," Nature 655, 1154-1159 \(2026\). https://doi.org/10.1038/s41586-026-10754-7) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 201.9 Tm ([6] The numerical research archives R138-R154 accompanying this synthesis \(October 2026\), including) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 189.9 Tm (reproducibility scripts, pulse CSVs, full-state validation outputs, and model-specific Monte Carlo) Tj ET
+BT /F1 8.7 Tf 1 0 0 1 52.0 177.9 Tm (evidence. These are internal computational source records, not independently peer-reviewed publications.) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 52.0 34.0 Tm (Working research synthesis | GitGuanjie/EO | November 2026) Tj ET
+BT /F1 7.6 Tf 1 0 0 1 528.0 34.0 Tm (6) Tj ET
+endstream
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000021 00000 n 
+0000000070 00000 n 
+0000000161 00000 n 
+0000000258 00000 n 
+0000000360 00000 n 
+0000000455 00000 n 
+0000000605 00000 n 
+0000005530 00000 n 
+0000005680 00000 n 
+0000010957 00000 n 
+0000011109 00000 n 
+0000016308 00000 n 
+0000016460 00000 n 
+0000021529 00000 n 
+0000021681 00000 n 
+0000027424 00000 n 
+0000027576 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R >>
+startxref
+33187
+%%EOF
