@@ -9,8 +9,10 @@ This folder collects the analysis previously staged in a draft PR in `Nuclear-hi
 - [Paper-style manuscript](MANUSCRIPT.md) — six-spin simultaneous exchange, first-order gain errors, encoded leakage, nine-spin stabilizer extraction, and five-EO four-body references.
 - [Results ledger](RESULTS_LEDGER.md) — what was reproduced, improved, disproved within a tested class, or remains open.
 - [Reproducibility and source evidence](REPRODUCIBILITY.md) — conventions, audit checklist, original run archives.
-- [Build the paper](BUILD_PDF.md) — PDF instructions.
+- [Read the paper as PDF](EO_QEC_Research_Synthesis_Readable.pdf) — text-focused PDF rendering of the working manuscript (no embedded plots); [build instructions](BUILD_PDF.md).
 - [Full-precision 48-control ZZ-check sequence](selected_sequences/ZZ_48C_P1R0.csv).
+- [Full-precision 30-control exact CZ sequence](selected_sequences/CZ30C_R143_STATIC_OPT.csv).
+- [Six-layer dual-static-gain three-spin sequence](selected_sequences/THREE_SPIN_6L_DUAL_GAIN.csv).
 
 ## Verified headline results
 
@@ -24,7 +26,7 @@ This folder collects the analysis previously staged in a draft PR in `Nuclear-hi
 
 **Status:** numerical research only. No validated fault-tolerance threshold, repeated logical error suppression, physical hardware demonstration, or first-order error-free encoded two-EO CZ is claimed.
 
-The paper-style PDF and frozen round-by-round ZIP archives were also produced in ChatGPT. See the conversation attachment links for the original binary downloads; if binaries are not present in this repository, the Markdown text is the canonical browsable version here.
+**PDF provenance:** the PDF committed here is an easy-to-open, text-focused rendering of the manuscript. The original figure-rich, typeset nine-page PDF and the frozen research-code ZIP archives remain available through the originating ChatGPT conversation; they have **not** been copied to this GitHub folder. The Markdown is the canonical editable manuscript in GitHub.
 
 ## Publication caution
 
