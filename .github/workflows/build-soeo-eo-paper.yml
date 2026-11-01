@@ -1,0 +1,39 @@
+name: Render SOEO-EO QEC working paper PDF
+
+on:
+  push:
+    paths:
+      - "SOEO_EO_QEC/manuscript/SOEO_EO_QEC_WORKING_PAPER.md"
+      - ".github/workflows/build-soeo-eo-paper.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install Pandoc and XeLaTeX
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y pandoc texlive-xetex texlive-latex-extra texlive-fonts-recommended fonts-dejavu
+      - name: Render manuscript
+        run: |
+          # The original figures are omitted until their binary assets are available in this repository.
+          sed -e '/^!\\[/d' -e 's/linkcolor: MidnightBlue/linkcolor: blue/' -e 's/urlcolor: MidnightBlue/urlcolor: blue/' SOEO_EO_QEC/manuscript/SOEO_EO_QEC_WORKING_PAPER.md > /tmp/soeo_eo_paper.md
+          pandoc /tmp/soeo_eo_paper.md -o SOEO_EO_QEC/manuscript/SOEO_EO_QEC_WORKING_PAPER.pdf --pdf-engine=xelatex -V mainfont="DejaVu Sans" -V monofont="DejaVu Sans Mono"
+      - name: Commit generated PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add SOEO_EO_QEC/manuscript/SOEO_EO_QEC_WORKING_PAPER.pdf
+          if git diff --cached --quiet; then
+            echo "PDF unchanged"
+          else
+            git commit -m "docs: render SOEO-EO QEC working paper PDF"
+            git push
+          fi

@@ -1,0 +1,3 @@
+# PDF build
+
+The source paper is `SOEO_EO_QEC_WORKING_PAPER.md`. The GitHub Actions workflow `.github/workflows/build-soeo-eo-paper.yml` uses Pandoc and XeLaTeX to render `SOEO_EO_QEC_WORKING_PAPER.pdf` and commit it to `main` (subject to repository Actions permissions). The four original figure references are omitted from this automated version because those binary figure assets have not yet been uploaded. This generated PDF is a text-and-math rendering, not necessarily byte-identical to the originally typeset 10-page local PDF. If the workflow fails, the Markdown manuscript remains authoritative. Run the workflow manually from GitHub Actions if needed.
