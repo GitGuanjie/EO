@@ -1,5 +1,7 @@
 # Exchange-only spin-qubit control and native QEC measurements
 
+**Current PRX-style paper rewrite:** [Measurement-Aware EO Compilation](prx-manuscript/README.md) (new research manuscript, with REVTeX LaTeX source, supplementary material, figures and editorial audit). The older MANUSCRIPT.md is preserved as historical R138–R154 context.
+
 **Computational research synthesis, R138–R154 (working draft, November 2026).**
 
 This folder collects the analysis previously staged in a draft PR in `Nuclear-high-spin-VPC`. It now lives in the dedicated **EO** repository.
