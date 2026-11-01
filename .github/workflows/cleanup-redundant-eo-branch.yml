@@ -1,0 +1,37 @@
+name: Cleanup redundant migration branch (one-time)
+on:
+  push:
+    paths:
+      - ".github/workflows/cleanup-redundant-eo-branch.yml"
+permissions:
+  contents: write
+jobs:
+  remove-redundant-branch:
+    if: github.repository == 'GitGuanjie/EO' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check unchanged branch and remove only redundant branch
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const ref = 'heads/migration/eo-native-qec-20261101';
+            const expected = 'cffd7ff90e393480234f820ee5ceaaefd64a816f';
+            let actual;
+            try {
+              const res = await github.rest.git.getRef({ owner, repo, ref });
+              actual = res.data.object.sha;
+            } catch (error) {
+              if (error.status === 404) {
+                core.info('Already absent; no action needed.');
+                return;
+              }
+              throw error;
+            }
+            if (actual !== expected) {
+              core.setFailed('Branch changed; refusing deletion.');
+              return;
+            }
+            await github.rest.git.deleteRef({ owner, repo, ref });
+            core.info('Removed redundant migration branch; main retained.');
